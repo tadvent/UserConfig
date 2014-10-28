@@ -37,6 +37,10 @@ fi
 
 
 # My mount point
-mount -fo binary,noacl,posix=0,user D:/docs ~/docs
+#mount -fo binary,noacl,posix=0,user D:/docs ~/docs
+
+# My Environment Variable
+export EDITOR=vim
+
 
 
