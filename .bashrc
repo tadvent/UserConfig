@@ -107,6 +107,9 @@
  alias lla='ls -lA'
  alias l='ls -CF'                              #
 
+# valgrind
+alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
+
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
