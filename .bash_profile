@@ -43,6 +43,5 @@ fi
 export EDITOR=vim
 
 
-#PS1='\033]0;${PWD}\n\033[32m${USER}@${HOSTNAME} \033[33m${PWD/${HOME}/~}\033[0m\n$ '
 
 
