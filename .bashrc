@@ -110,6 +110,17 @@
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
 
+# Bash completion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+fi
+if [ -f ~/.git-prompt.sh ]; then
+	. ~/.git-prompt.sh
+fi
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \n\$\[\033[00m\] '
+
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
