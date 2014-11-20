@@ -27,7 +27,7 @@ ZSH_THEME="tjkirch"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -79,3 +79,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+ alias grep='grep --color'                     # show differences in colour
+ alias synclock='sudo hwclock --hctosys --localtime' # sync clock to host
+
+# valgrind
+alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
+

@@ -1,3 +1,4 @@
 *
 !.gitignore
 
+!.oh-my-zsh/custom/
