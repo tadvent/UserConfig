@@ -188,3 +188,6 @@
 # }
 # 
 # alias cd=cd_func
+
+export PATH=/home/tadvent/.gem/ruby/2.1.0/bin:$PATH
+

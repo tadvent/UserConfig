@@ -7,3 +7,5 @@ CursorType=line
 Columns=90
 Rows=42
 CopyOnSelect=no
+Locale=
+Charset=
