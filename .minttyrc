@@ -1,9 +1,0 @@
-BoldAsFont=yes
-Transparency=high
-OpaqueWhenFocused=no
-Font=Monaco
-FontHeight=10
-CursorType=line
-Columns=90
-Rows=42
-CopyOnSelect=no
