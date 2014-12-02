@@ -86,6 +86,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
 
+# pyenv autoload
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # colored less pages
 man() {
 	env \
