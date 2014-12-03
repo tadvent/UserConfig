@@ -98,7 +98,8 @@ behave mswin
 autocmd! bufwritepost $MYVIMRC source %
 
 " filetype set
-autocmd FileType c,cpp,cs,dosbatch,python set softtabstop=4 | set shiftwidth=4 | set expandtab
+autocmd FileType c,cpp,cs,dosbatch,python,markdown set softtabstop=4 | set shiftwidth=4 | set expandtab
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " cursor style
 "let &t_ti.="\e[1 q"
@@ -114,6 +115,7 @@ set sidescroll=1
 set nobackup
 set hlsearch
 set incsearch
+set autoindent
 
 set ignorecase
 set smartcase
