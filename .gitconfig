@@ -1,6 +1,6 @@
 [merge]
 	tool = kdiff3
-	ff = false
+	ff = true
 [mergetool "kdiff3"]
 	path = C:/Program Files/KDiff3/kdiff3.exe
 [user]
@@ -17,6 +17,7 @@
 [core]
 	editor = gvim
 	autocrlf = input
+	excludesfile = /home/tadvent/.gitignore_global
 [color]
 	ui = true
 [diff]
