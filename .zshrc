@@ -91,6 +91,9 @@ export EDITOR='vim'
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
 
+# synclock
+alias synclock='sudo ntpdate pool.ntp.org'
+
 # colored less pages
 man() {
 	env \
