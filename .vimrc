@@ -21,6 +21,11 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 
+"Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'rust-lang/rust.vim'
+"Plugin 'klen/python-mode'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "Plugin 'fencview.vim'
@@ -138,6 +143,12 @@ set cul
 " Plugins config:
 
 "-------------------------------------------------
+" Powerline
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+
+"-------------------------------------------------
 " FencView
 let g:fencview_checklines=100
 let g:fencview_autodetect=0
@@ -148,6 +159,11 @@ let g:fencview_autodetect=0
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
+
+"-------------------------------------------------
+" pymode
+let g:pymode_rope_completion_bind = '<C-\>'
+
 
 "-------------------------------------------------
 

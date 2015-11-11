@@ -1,7 +1,5 @@
-[merge]
-	ff = false
 [user]
-	name = tadvent
+	name = Jinlin Wang
 	email = dantvt@gmail.com
 [alias]
 	co = checkout
