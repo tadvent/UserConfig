@@ -189,5 +189,6 @@
 # 
 # alias cd=cd_func
 
+export PATH=/d/devel/vim/vim74:$PATH
 export PATH=/home/tadvent/.gem/ruby/2.1.0/bin:$PATH
 

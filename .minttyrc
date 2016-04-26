@@ -1,11 +1,12 @@
 BoldAsFont=yes
 Transparency=high
 OpaqueWhenFocused=no
-Font=Monaco
-FontHeight=10
+Font=Consolas
+FontHeight=11
 CursorType=line
 Columns=90
 Rows=42
 CopyOnSelect=no
-Locale=
-Charset=
+Locale=zh_CN
+Charset=GBK
+ScrollbackLines=100000

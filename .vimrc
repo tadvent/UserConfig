@@ -23,7 +23,7 @@ Plugin 'kien/ctrlp.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
-"Plugin 'fencview.vim'
+Plugin 'fencview.vim'
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -109,7 +109,7 @@ let &t_te.="\e[0 q"
 
 " custom options
 color torte    " ron, blue
-set guifont=monaco:h11,NSimSun:h11
+set guifont=DejaVu\ Sans\ Mono:h11,monaco:h11,Consolas:h11,NSimSun:h11
 set number
 set sidescroll=1
 set nobackup
