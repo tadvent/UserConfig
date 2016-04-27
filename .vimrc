@@ -27,8 +27,8 @@ Plugin 'rust-lang/rust.vim'
 "Plugin 'klen/python-mode'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'fencview.vim'
 "Plugin 'L9'
-"Plugin 'fencview.vim'
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
