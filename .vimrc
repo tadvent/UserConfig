@@ -20,6 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -131,7 +132,7 @@ set laststatus=2
 
 " Press v in quickfix window to preview
 au FileType qf :nnoremap <buffer> v <Enter>zz:wincmd p<Enter>
-set cul
+"set cul
 
 
 "===========================================================
@@ -149,5 +150,18 @@ let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 
+"-------------------------------------------------
+"Auto Highlight current word
+set updatetime=10
+
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
+        exec 'match' 'MatchParen' '/\V\<'.expand('<cword>').'\>/' 
+    else 
+        match none 
+    endif
+endfunction
+
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 "-------------------------------------------------
 
