@@ -25,6 +25,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rust-lang/rust.vim'
 "Plugin 'klen/python-mode'
+Plugin 'sukima/xmledit'
+Plugin 'dcharbon/vim-flatbuffers'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'fencview.vim'
@@ -103,7 +105,7 @@ behave mswin
 autocmd! bufwritepost $MYVIMRC source %
 
 " filetype set
-autocmd FileType c,cpp,cs,dosbatch,python,markdown set softtabstop=4 | set shiftwidth=4 | set expandtab
+set softtabstop=4 | set shiftwidth=4 | set expandtab
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " cursor style
