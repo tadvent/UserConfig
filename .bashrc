@@ -106,6 +106,7 @@
  alias la='ls -A'                              # all but . and ..
  alias l='ls -CF'                              #
 
+
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
@@ -189,6 +190,8 @@
 # 
 # alias cd=cd_func
 
-export PATH=$PATH:/d/devel/vim/vim74
+# My Alias
+alias vim='gvim.exe'
+
 export PATH=/home/tadvent/.gem/ruby/2.1.0/bin:$PATH
 
