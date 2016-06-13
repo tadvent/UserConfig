@@ -19,8 +19,19 @@ Plugin 'gmarik/Vundle.vim'
 
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'dcharbon/vim-flatbuffers'
+Plugin 'lervag/vimtex'
+"Plugin 'ajh17/VimCompletesMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neoinclude.vim'
+"Plugin 'Shougo/neosnippet.vim'
+"Plugin 'Shougo/neosnippet-snippets'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -99,7 +110,7 @@ behave mswin
 autocmd! bufwritepost $MYVIMRC source %
 
 " filetype set
-autocmd FileType c,cpp,cs,dosbatch,python,markdown set softtabstop=4 | set shiftwidth=4 | set expandtab
+set softtabstop=4 | set shiftwidth=4 | set expandtab
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " cursor style
@@ -142,7 +153,10 @@ au FileType qf :nnoremap <buffer> v <Enter>zz:wincmd p<Enter>
 " FencView
 let g:fencview_checklines=100
 let g:fencview_autodetect=0
-"let g:fencview_auto_patterns='*.txt,*.cue,*.ini,*.bat,*.c,*.cpp,*.cxx,*.h,*.hpp,*.py,*.pyw,*.htm{l\=}'
+
+"-------------------------------------------------
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
 
 "-------------------------------------------------
 " ctrlp.vim
@@ -152,16 +166,27 @@ let g:ctrlp_working_path_mode='ra'
 
 "-------------------------------------------------
 "Auto Highlight current word
-set updatetime=10
 
-function! HighlightWordUnderCursor()
-    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
-        exec 'match' 'MatchParen' '/\V\<'.expand('<cword>').'\>/' 
-    else 
-        match none 
-    endif
-endfunction
-
-autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 "-------------------------------------------------
+" vimtex
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.tex =
+      \ '\v\\%('
+      \ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+      \ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
+      \ . '|hyperref\s*\[[^]]*'
+      \ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+      \ . '|%(include%(only)?|input)\s*\{[^}]*'
+      \ . '|\a*(gls|Gls|GLS)(pl)?\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+      \ . '|includepdf%(\s*\[[^]]*\])?\s*\{[^}]*'
+      \ . '|includestandalone%(\s*\[[^]]*\])?\s*\{[^}]*'
+      \ . ')'
+
+"-------------------------------------------------
