@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 "Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-commentary'
@@ -27,6 +27,14 @@ Plugin 'rust-lang/rust.vim'
 "Plugin 'klen/python-mode'
 Plugin 'sukima/xmledit'
 Plugin 'dcharbon/vim-flatbuffers'
+
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neoinclude.vim'
+"Plugin 'Shougo/neosnippet.vim'
+"Plugin 'Shougo/neosnippet-snippets'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'fencview.vim'
@@ -154,7 +162,9 @@ au FileType qf :nnoremap <buffer> v <Enter>zz:wincmd p<Enter>
 " FencView
 let g:fencview_checklines=100
 let g:fencview_autodetect=0
-"let g:fencview_auto_patterns='*.txt,*.cue,*.ini,*.bat,*.c,*.cpp,*.cxx,*.h,*.hpp,*.py,*.pyw,*.htm{l\=}'
+
+"-------------------------------------------------
+let g:neocomplete#enable_at_startup = 1
 
 "-------------------------------------------------
 " ctrlp.vim
@@ -163,22 +173,8 @@ let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_working_path_mode='ra'
 
 "-------------------------------------------------
-" pymode
-"let g:pymode_rope_completion_bind = '<C-\>'
-
-
-"-------------------------------------------------
 "Auto Highlight current word
-set updatetime=10
+:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
-function! HighlightWordUnderCursor()
-    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
-        exec 'match' 'MatchParen' '/\V\<'.expand('<cword>').'\>/' 
-    else 
-        match none 
-    endif
-endfunction
-
-autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 "-------------------------------------------------
 
