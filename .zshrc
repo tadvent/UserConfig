@@ -46,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git meteor cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python pyenv systemd)
 
 # User configuration
 
@@ -107,3 +107,6 @@ man() {
 		man "$@"
 }
 
+
+export NVM_DIR="/home/wjl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
