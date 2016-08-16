@@ -46,18 +46,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git meteor cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python pyenv systemd)
+plugins=(git meteor cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python systemd)
 
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,5 +102,8 @@ man() {
 }
 
 
-export NVM_DIR="/home/wjl/.nvm"
+export NVM_DIR="/home/tadvent/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# added by Miniconda3 4.1.11 installer
+export PATH="/home/tadvent/.miniconda3/bin:$PATH"
