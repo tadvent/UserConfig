@@ -101,9 +101,9 @@ man() {
 		man "$@"
 }
 
+# Miniconda3
+export PATH="$HOME/.miniconda3/bin:$PATH"
 
-export NVM_DIR="/home/tadvent/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# added by Miniconda3 4.1.11 installer
-export PATH="/home/tadvent/.miniconda3/bin:$PATH"
