@@ -102,7 +102,7 @@ man() {
 }
 
 # pyenv
-export PATH="/home/jwang/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
