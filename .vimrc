@@ -27,6 +27,8 @@ Plugin 'rust-lang/rust.vim'
 "Plugin 'klen/python-mode'
 Plugin 'sukima/xmledit'
 Plugin 'dcharbon/vim-flatbuffers'
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neoinclude.vim'
