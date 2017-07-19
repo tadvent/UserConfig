@@ -81,6 +81,8 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Jyputer notebook
+alias jpt='jupyter notebook --port 9099 --no-browser'
 
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
