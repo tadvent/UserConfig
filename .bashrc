@@ -117,6 +117,11 @@ fi
 
 PS1='\033]0;${PWD}\n\033[32m${USER}@${HOSTNAME} \033[33m${PWD/${HOME}/~}\033[0m\n$ '
 
+# Launch zsh
+if [ -t 1 ]; then
+    exec zsh
+fi
+
 # colored less pages
 man() {
 	env \
