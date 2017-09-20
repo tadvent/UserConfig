@@ -8,5 +8,5 @@ Columns=90
 Rows=42
 CopyOnSelect=no
 Locale=zh_CN
-Charset=GBK
+Charset=UTF-8
 ScrollbackLines=100000
