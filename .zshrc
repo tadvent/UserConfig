@@ -117,10 +117,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # scl devtoolset-7
-if [[ ":$LD_LIBRARY_PATH:" != *"devtoolset-7"* ]];
-    then source /opt/rh/devtoolset-7/enable;
-fi
-# if [[ ":$LD_LIBRARY_PATH:" != *":/opt/boost_1_67-gcc7/lib:"* ]];
-#     then export LD_LIBRARY_PATH="/opt/boost_1_67-gcc7/lib:$LD_LIBRARY_PATH";
+# if [[ ":$LD_LIBRARY_PATH:" != *"devtoolset-7"* ]];
+#     then source /opt/rh/devtoolset-7/enable;
+# fi
+# if [[ ":$LD_LIBRARY_PATH:" != *":/opt/gcc7-dev/lib:"* ]];
+#     then export LD_LIBRARY_PATH="/opt/gcc7-dev/lib:$LD_LIBRARY_PATH";
 # fi
 
