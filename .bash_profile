@@ -41,7 +41,9 @@ fi
 
 # My Environment Variable
 export EDITOR=vim
+export C_INCLUDE_PATH="$HOME/.local/include:$C_INCLUDE_PATH"
+export CPLUS_INCLUDE_PATH="$HOME/.local/include:$CPLUS_INCLUDE_PATH"
 
-
-
-
+# add ~/.local/bin to $PATH
+export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
+export PATH=$PY_USER_BIN:$PATH
