@@ -22,3 +22,5 @@
 	prompt = false
 [merge "ours"]
 	driver = true
+[http]
+	postBuffer = 157286400

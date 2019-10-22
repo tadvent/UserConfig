@@ -56,6 +56,9 @@ Plugin 'fencview.vim'
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 
+" highlight current word
+Plugin 'dominikduda/vim_current_word'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -176,7 +179,10 @@ let g:ctrlp_working_path_mode='ra'
 
 "-------------------------------------------------
 "Auto Highlight current word
-:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+":autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+hi link CurrentWordTwins Search
+hi CurrentWord cterm=underline gui=underline
 
 "-------------------------------------------------
 
