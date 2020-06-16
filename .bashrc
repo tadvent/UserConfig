@@ -219,3 +219,4 @@ man() {
 # }
 # 
 # alias cd=cd_func
+

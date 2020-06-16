@@ -57,7 +57,7 @@ Plugin 'fencview.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " highlight current word
-Plugin 'dominikduda/vim_current_word'
+"Plugin 'dominikduda/vim_current_word'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -146,8 +146,8 @@ set undodir=~/.vim/undodir
 set undofile
 
 " status line
-set statusline=%-30.60(%f%m%(\ [%R%H%W]%)\ [%{&ff}%(/%{&fenc}%)%(/%Y%)]%)\ [CHAR=%b,0x%04B]%=\ [%l/%L,%c%V]%5P
-set laststatus=2
+"set statusline=%-30.60(%f%m%(\ [%R%H%W]%)\ [%{&ff}%(/%{&fenc}%)%(/%Y%)]%)\ [CHAR=%b,0x%04B]%=\ [%l/%L,%c%V]%5P
+"set laststatus=2
 
 " Press v in quickfix window to preview
 au FileType qf :nnoremap <buffer> v <Enter>zz:wincmd p<Enter>
@@ -179,10 +179,10 @@ let g:ctrlp_working_path_mode='ra'
 
 "-------------------------------------------------
 "Auto Highlight current word
-":autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
-hi link CurrentWordTwins Search
-hi CurrentWord cterm=underline gui=underline
+"hi link CurrentWordTwins Search
+"hi CurrentWord cterm=underline gui=underline
 
 "-------------------------------------------------
 

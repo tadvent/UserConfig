@@ -16,6 +16,7 @@
 	ui = true
 [diff]
 	renames = copy
+	submodule = log
 [difftool]
 	prompt = false
 [mergetool]
@@ -24,3 +25,7 @@
 	driver = true
 [http]
 	postBuffer = 157286400
+[fetch]
+	recurseSubmodules = on-demand
+[status]
+	submoduleSummary = true

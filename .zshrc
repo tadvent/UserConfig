@@ -46,7 +46,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitignore cargo meteor cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python pyenv systemd)
+plugins=(git gitignore cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python pyenv systemd)
 
 # User configuration
 
@@ -82,7 +82,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Jyputer notebook
-alias jpt='jupyter notebook --port 9099 --no-browser'
+alias jpt='jupyter notebook --ip 0.0.0.0 --port 45099 --no-browser'
 
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
@@ -116,14 +116,18 @@ export C_INCLUDE_PATH="$HOME/.local/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$HOME/.local/include:$CPLUS_INCLUDE_PATH"
 
 # add ~/.local/bin to $PATH
-export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
-export PATH=$PY_USER_BIN:$PATH
+# export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
+# export PATH=$PY_USER_BIN:$PATH
 
 # Miniconda3
 # export PATH="$HOME/.miniconda3/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# tmuxp
+export DISABLE_AUTO_TITLE='true'
+eval "$(_TMUXP_COMPLETE=source_zsh tmuxp)"
 
 # scl devtoolset-7
 # if [[ ":$LD_LIBRARY_PATH:" != *"devtoolset-7"* ]];
