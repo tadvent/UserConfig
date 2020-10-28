@@ -1,5 +1,10 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+#export ZSH=$HOME/.oh-my-zsh
+export ZSH="/data/data/com.termux/files/home/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -46,11 +51,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitignore cp colorize command-not-found tmux supervisor vundle redis-cli node npm nvm pip python pyenv systemd)
+plugins=(git gitignore cp colorize command-not-found vundle tmux pip python pyenv systemd)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,7 +86,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Jyputer notebook
-alias jpt='jupyter notebook --ip 0.0.0.0 --port 45099 --no-browser'
+#alias jpt='jupyter notebook --ip 0.0.0.0 --port 45099 --no-browser'
 
 # valgrind
 alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --read-var-info=yes --time-stamp=yes'
@@ -90,28 +94,14 @@ alias valg='valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --r
 # synclock
 alias synclock='sudo ntpdate pool.ntp.org'
 
-# colored less pages
-man() {
-	env \
-		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-		LESS_TERMCAP_md=$(printf "\e[1;31m") \
-		LESS_TERMCAP_me=$(printf "\e[0m") \
-		LESS_TERMCAP_se=$(printf "\e[0m") \
-		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-		LESS_TERMCAP_ue=$(printf "\e[0m") \
-		LESS_TERMCAP_us=$(printf "\e[1;32m") \
-		man "$@"
-}
-
 # pyenv
-if [[ ":$PATH:" != *":$HOME/.pyenv/bin:"* ]];
-    then export PATH="$HOME/.pyenv/bin:$PATH";
-fi
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#if [[ ":$PATH:" != *":$HOME/.pyenv/bin:"* ]];
+#    then export PATH="$HOME/.pyenv/bin:$PATH";
+#fi
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # My Environment Variable
-# export EDITOR=vim
 export C_INCLUDE_PATH="$HOME/.local/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$HOME/.local/include:$CPLUS_INCLUDE_PATH"
 
@@ -122,12 +112,9 @@ export CPLUS_INCLUDE_PATH="$HOME/.local/include:$CPLUS_INCLUDE_PATH"
 # Miniconda3
 # export PATH="$HOME/.miniconda3/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # tmuxp
-export DISABLE_AUTO_TITLE='true'
-eval "$(_TMUXP_COMPLETE=source_zsh tmuxp)"
+#export DISABLE_AUTO_TITLE='true'
+#eval "$(_TMUXP_COMPLETE=source_zsh tmuxp)"
 
 # scl devtoolset-7
 # if [[ ":$LD_LIBRARY_PATH:" != *"devtoolset-7"* ]];
