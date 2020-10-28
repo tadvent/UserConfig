@@ -35,8 +35,8 @@ Plugin 'Shougo/neoinclude.vim'
 "Plugin 'Shougo/neosnippet.vim'
 "Plugin 'Shougo/neosnippet-snippets'
 
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'fencview.vim'
