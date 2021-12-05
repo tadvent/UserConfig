@@ -24,3 +24,4 @@
 	driver = true
 [http]
 	postBuffer = 157286400
+	#proxy = http://127.0.0.1:8008
