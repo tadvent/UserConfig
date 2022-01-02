@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # my config
 export EDITOR='vim'
 
+# for tmuxp
+export DISABLE_AUTO_TITLE='true'
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
